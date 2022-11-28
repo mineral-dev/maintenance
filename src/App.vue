@@ -6,14 +6,22 @@ const title = import.meta.env.VITE_TITLE
 const logo = import.meta.env.VITE_LOGO
 const bg = import.meta.env.VITE_COLOR_BG
 const text = import.meta.env.VITE_COLOR_TEXT
+
+let heading = import.meta.env.VITE_HEADING
+if (!heading)
+  heading = "Be right back."
+
+let caption = import.meta.env.VITE_CAPTION
+if (!caption)
+  caption = `We're making updates to ${title}.<br/>Check back soon.`
 </script>
 
 <template>
   <div class="w-screen h-screen grid place-items-center" :style="`background-color:${bg}; color:${text}`">
     <div class="grid gap-y-4 place-items-center text-center">
       <img :src="logo" width="100"/>
-      <h1 class="text-5xl font-bold">Be right back.</h1>
-      <p class="text-sm">We're making updates to {{title}}.<br/>Check back soon.</p>
+      <h1 class="text-5xl font-bold" v-html="heading"></h1>
+      <p class="text-sm" v-html="caption"></p>
     </div>
   </div>
 </template>
