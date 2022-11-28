@@ -4,8 +4,13 @@
 // import HelloWorld from './components/HelloWorld.vue'
 const title = import.meta.env.VITE_TITLE
 const logo = import.meta.env.VITE_LOGO
-const bg = import.meta.env.VITE_COLOR_BG
-const text = import.meta.env.VITE_COLOR_TEXT
+let bg = import.meta.env.VITE_COLOR_BG
+if (!bg)
+  bg = "#f9f9f9f9"
+
+let text = import.meta.env.VITE_COLOR_TEXT
+if (!text)
+  text = "#222222"
 
 let heading = import.meta.env.VITE_HEADING
 if (!heading)
