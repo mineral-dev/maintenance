@@ -16,8 +16,8 @@ const env = {
   <div class="w-screen h-screen grid place-items-center" :style="`background-color:${env.bg}; color:${env.text}`">
     <div class="grid gap-y-4 place-items-center text-center">
       <img v-if="env.logo" :src="env.logo" height="100"/>
-      <h1 class="text-xl font-bold" v-html="env.heading"></h1>
-      <p class="text-sm leading-8" v-html="env.caption"></p>
+      <h1 class="text-xl font-bold mt-12" v-html="env.heading"></h1>
+      <p class="text-sm leading-6" v-html="env.caption"></p>
     </div>
   </div>
 </template>
