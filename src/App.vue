@@ -1,7 +1,7 @@
 <script setup>
 const {VITE_TITLE, VITE_LOGO, VITE_COLOR_BG, VITE_COLOR_TEXT, VITE_HEADING, VITE_CAPTION} = import.meta.env
 
-const title = VITE_TITLE && VITE_TITLE!==''                ? VITE_TITLE :  "Mineral"
+const title = VITE_TITLE && VITE_TITLE!==''                ? VITE_TITLE :  "this site"
 
 const env = {
   "logo":     VITE_LOGO       && VITE_LOGO!==''             ? VITE_LOGO : null,
