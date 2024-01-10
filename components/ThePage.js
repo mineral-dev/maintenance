@@ -23,7 +23,7 @@ export default function ThePage() {
             />
           ) : (
             <p>
-              We're making updates
+              We&apos;re making updates
               {process.env.NEXT_PUBLIC_SITE_NAME
                 ? ` to ${process.env.NEXT_PUBLIC_SITE_NAME}.`
                 : "."}
