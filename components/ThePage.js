@@ -15,17 +15,23 @@ export default function ThePage() {
         <h1 className="text-xl font-bold mt-12">
           {process.env.NEXT_PUBLIC_HEADING || "Be right back."}
         </h1>
-        <p className="text-sm leading-6">
-          {process.env.NEXT_PUBLIC_BODY
-            ? process.env.NEXT_PUBLIC_BODY
-            : `We're making updates ${
-                process.env.NEXT_PUBLIC_SITE_NAME
-                  ? ` to ${process.env.NEXT_PUBLIC_SITE_NAME}.`
-                  : "."
-              }`}
-          <br />
-          Check back soon.
-        </p>
+        <div className="text-sm leading-6">
+          {process.env.NEXT_PUBLIC_BODY ? (
+            <div
+              className="space-y-2"
+              dangerouslySetInnerHTML={{ __html: process.env.NEXT_PUBLIC_BODY }}
+            />
+          ) : (
+            <p>
+              We're making updates
+              {process.env.NEXT_PUBLIC_SITE_NAME
+                ? ` to ${process.env.NEXT_PUBLIC_SITE_NAME}.`
+                : "."}
+              <br />
+              Check back soon.
+            </p>
+          )}
+        </div>
       </div>
     </div>
   )
