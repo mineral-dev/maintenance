@@ -23,7 +23,7 @@ export default function ThePage() {
             />
           ) : (
             <article className="prose text-sm">
-              <p>We're currently undergoing essential maintenance to enhance your browsing experience.</p>
+              <p>We&apos;re currently undergoing essential maintenance to enhance your browsing experience.</p>
               <p>Please bear with us as we work diligently to complete these upgrades.</p>
               <p>We apologize for any inconvenience this may cause and appreciate your patience.</p>
               <p>Thank you for your understanding.</p>
