@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function ThePage() {
   return (
-    <div className="w-[100dvw] h-[100dvh] grid place-items-center">
+    <div className="w-[100dvw] h-[100dvh] grid place-items-center p-8">
       <div className="grid gap-y-4 place-items-center text-center">
         {process.env.NEXT_PUBLIC_LOGO && (
           <Image
@@ -17,19 +17,20 @@ export default function ThePage() {
         </h1>
         <div className="text-sm leading-6">
           {process.env.NEXT_PUBLIC_BODY ? (
-            <div
-              className="space-y-2"
+            <article
+              className="prose text-sm"
               dangerouslySetInnerHTML={{ __html: process.env.NEXT_PUBLIC_BODY }}
             />
           ) : (
-            <p>
-              We&apos;re making updates
-              {process.env.NEXT_PUBLIC_SITE_NAME
-                ? ` to ${process.env.NEXT_PUBLIC_SITE_NAME}.`
-                : "."}
-              <br />
-              Check back soon.
-            </p>
+            <article className="prose text-sm">
+              <p>
+                We&apos;re making updates
+                {process.env.NEXT_PUBLIC_SITE_NAME
+                  ? ` to ${process.env.NEXT_PUBLIC_SITE_NAME}.`
+                  : "."}
+              </p>
+              <p>Check back soon.</p>
+            </article>
           )}
         </div>
       </div>
