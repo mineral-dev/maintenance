@@ -4,17 +4,22 @@ export default function ThePage() {
   return (
     <div className="w-[100dvw] h-[100dvh] grid place-items-center p-8">
       <div className="grid gap-y-4 place-items-center text-center">
-        {process.env.NEXT_PUBLIC_LOGO && (
-          <Image
-            src={process.env.NEXT_PUBLIC_LOGO}
-            width={200}
-            height={200}
-            alt={process.env.NEXT_PUBLIC_SITE_NAME}
-          />
-        )}
-        <h1 className="text-xl font-bold mt-12">
-          {process.env.NEXT_PUBLIC_HEADING || "Be right back."}
-        </h1>
+        {process.env.NEXT_PUBLIC_LOGO 
+          ? (
+            <Image
+              src={process.env.NEXT_PUBLIC_LOGO}
+              width={200}
+              height={200}
+              alt={process.env.NEXT_PUBLIC_SITE_NAME}
+            />
+          )
+          : (
+            <h1 className="text-2xl font-bold">{process.env.NEXT_PUBLIC_SITE_NAME ?? "We Are Sorry."}</h1>
+          )
+        }
+        <h2 className="text-xl font-bold mt-12">
+          {process.env.NEXT_PUBLIC_HEADING ?? "Be right back."}
+        </h2>
         <div className="text-sm leading-6">
           {process.env.NEXT_PUBLIC_BODY ? (
             <article
