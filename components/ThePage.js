@@ -39,11 +39,11 @@ export default function ThePage() {
         <div className="text-sm leading-6">
           {process.env.NEXT_PUBLIC_BODY ? (
             <article
-              className="prose text-sm dark:prose-p:text-white"
+              className="prose text-sm dark:prose-p:text-white dark:prose-a:text-white"
               dangerouslySetInnerHTML={{ __html: process.env.NEXT_PUBLIC_BODY }}
             />
           ) : (
-            <article className="prose text-sm dark:prose-p:text-white">
+            <article className="prose text-sm dark:prose-p:text-white dark:prose-a:text-white">
               <p>
                 We&apos;re currently undergoing essential maintenance to enhance
                 your browsing experience.
