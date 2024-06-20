@@ -14,15 +14,15 @@ export default function Slug() {
 
 export async function getServerSideProps(context) {
   // Your logic to determine the HTTP status code
-  const statusCode = 503; // For example, setting 404 Not Found
+  const statusCode = 503 // For example, setting 404 Not Found
 
   // Setting the status code
-  context.res.statusCode = statusCode;
+  context.res.statusCode = statusCode
 
   // Returning props
   return {
-      props: {
-        // Your props here
-      }
-  };
+    props: {
+      // Your props here
+    },
+  }
 }
