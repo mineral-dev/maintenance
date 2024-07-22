@@ -24,7 +24,7 @@ export default function ThePage() {
               alt={process.env.NEXT_PUBLIC_SITE_NAME}
             />
           ) : (
-            <h1 className="text-2xl font-bold">
+            <h1 className="text-3xl font-bold">
               {process.env.NEXT_PUBLIC_SITE_NAME ?? "We Are Sorry."}
             </h1>
           )
