@@ -19,8 +19,8 @@ export default function ThePage() {
           process.env.NEXT_PUBLIC_LOGO ? (
             <Image
               src={process.env.NEXT_PUBLIC_LOGO}
-              width={200}
-              height={200}
+              width={100}
+              height={100}
               alt={process.env.NEXT_PUBLIC_SITE_NAME}
             />
           ) : (
@@ -43,24 +43,19 @@ export default function ThePage() {
               dangerouslySetInnerHTML={{ __html: process.env.NEXT_PUBLIC_BODY }}
             />
           ) : (
-            <article className="prose text-sm dark:prose-p:text-white dark:prose-a:text-white">
+            <article className="prose prose-p:mt-0 prose-p:mb-2 text-xs lg:text-sm dark:prose-p:text-white dark:prose-a:text-white">
               <p>
-                We&apos;re currently undergoing essential maintenance to enhance
-                your browsing experience.
+                We&apos;re doing some quick maintenance to improve your browsing experience.
               </p>
               <p>
                 Don&apos;t worry, your transactions and account information are
                 safe and won&apos;t be affected.
               </p>
               <p>
-                Please bear with us as we work diligently to complete these
-                upgrades.
+                We&apos;re sorry for any inconvenience and appreciate your patience.
               </p>
-              <p>
-                We apologize for any inconvenience this may cause and appreciate
-                your patience.
-              </p>
-              <p>Thank you for your understanding.</p>
+              <p>&nbsp;</p>
+              <p>Terima kasih!</p>
             </article>
           )}
         </div>
