@@ -49,6 +49,10 @@ export default function ThePage() {
                 your browsing experience.
               </p>
               <p>
+                Don&apos;t worry, your transactions and account information are
+                safe and won&apos;t be affected.
+              </p>
+              <p>
                 Please bear with us as we work diligently to complete these
                 upgrades.
               </p>
